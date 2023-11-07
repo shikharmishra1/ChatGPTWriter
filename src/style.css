@@ -1,5 +1,38 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
 
 @tailwind base;
+
 @tailwind components;
+
 @tailwind utilities;
+
+@keyframes typing {
+    0% {
+      width: 0%;
+      visibility: hidden;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+    100% {
+      border-color: white;
+    }
+  }
+
+.typing {
+  overflow: hidden;
+  
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: typing 1.8s steps(20)  , blink .7s ;
+  
+}
+  
+  
+  
